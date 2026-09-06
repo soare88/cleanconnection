@@ -1,124 +1,500 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Generator SEO Dinamic -->
-    <title>Clean Connection - Colectare, Sortare și Management Deșeuri</title>
-    <meta name="description" content="Partenerul tău de încredere în managementul deșeurilor reciclabile. Colectare eficientă și soluții sustenabile pentru companii.">
-    <meta name="keywords" content="clean connection, colectare deseuri, reciclare industriala, gestionare materiale reciclabile">
-    <meta name="robots" content="index, follow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --brand-blue: #0277bd;
-            --brand-teal: #00838f;
-            --text-dark: #263238;
-            --bg-offwhite: #f7f9fa;
-            --card-bg: #ffffff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
-        body { color: var(--text-dark); background: var(--bg-offwhite); line-height: 1.7; }
-        
-        header { background: var(--card-bg); border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
-        .container { width: 90%; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
-        .logo { font-size: 22px; font-weight: bold; color: var(--brand-teal); text-decoration: none; letter-spacing: 0.5px; }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 15px; transition: color 0.3s; }
-        nav ul li a:hover { color: var(--brand-blue); }
+<title>Clean Connection - Colectare, Sortare și Management Deșeuri</title>
+<meta name="description" content="Clean Connection preia, sortează și direcționează deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.">
+<meta name="keywords" content="clean connection, colectare deseuri, reciclare industriala, management deseuri">
+<meta name="robots" content="index, follow">
 
-        .hero-clean { background: linear-gradient(135deg, rgba(2,119,189,0.9), rgba(0,131,143,0.9)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; text-align: center; padding: 100px 20px; }
-        .hero-clean h1 { font-size: 38px; margin-bottom: 15px; }
-        .hero-clean p { font-size: 18px; max-width: 680px; margin: 0 auto 30px auto; opacity: 0.95; }
-        
-        .cta-btn { background: #fff; color: var(--brand-blue); padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: background 0.3s; }
-        .cta-btn:hover { background: var(--bg-offwhite); }
-        
-        .content-section { padding: 60px 0; background: var(--card-bg); }
-        .content-section.grey { background: var(--bg-offwhite); }
-        .content-section h2 { text-align: center; color: var(--brand-teal); margin-bottom: 40px; font-size: 28px; }
+<meta property="og:title" content="Clean Connection - Colectare, Sortare și Management Deșeuri">
+<meta property="og:description" content="Fluxul tău de deșeuri, coordonat de la un capăt la altul.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.cleanconnection.ro">
 
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature-box { background: var(--bg-offwhite); padding: 30px; border-radius: 8px; border-top: 3px solid var(--brand-blue); transition: transform 0.3s; }
-        .feature-box:hover { transform: translateY(-5px); }
-        .feature-box h3 { color: var(--brand-blue); margin-bottom: 12px; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
-        .contact-container { background: var(--card-bg); padding: 40px; border-radius: 8px; text-align: center; max-width: 550px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .contact-phone { font-size: 24px; font-weight: bold; color: var(--brand-teal); text-decoration: none; display: inline-block; margin-top: 12px; }
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F1F4F6;
+    --ink:#10233F;
+    --ink-soft:#54636F;
+    --accent:#0E9C8C;
+    --line:#DCE2E6;
+    --navy1:#081222;
+    --navy2:#10233F;
+  }
 
-        footer { background: var(--text-dark); color: #cfd8dc; text-align: center; padding: 30px 0; font-size: 14px; }
-    </style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+
+  h1, h2, h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  .container{
+    width:90%;
+    max-width:1080px;
+    margin:0 auto;
+  }
+
+  a{ color:inherit; }
+
+  header{
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    z-index:100;
+  }
+
+  header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    text-decoration:none;
+    color:var(--ink);
+  }
+
+  .logo svg{ width:22px; height:22px; color:var(--accent); }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:32px;
+  }
+
+  nav a{
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--ink-soft);
+    transition:color .2s;
+  }
+
+  nav a:hover{ color:var(--ink); }
+
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg, var(--navy1) 0%, var(--navy2) 55%, #0E4A45 130%);
+    padding:130px 0 100px;
+    text-align:center;
+    color:#fff;
+  }
+
+  .hero-pattern{
+    position:absolute;
+    inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.07'%3E%3Cline x1='40' y1='18' x2='52' y2='38'/%3E%3Cline x1='55' y1='55' x2='28' y2='55'/%3E%3Cline x1='18' y1='48' x2='30' y2='28'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat;
+  }
+
+  .hero-glow{
+    position:absolute;
+    top:-160px;
+    right:-140px;
+    width:420px;
+    height:420px;
+    background:var(--accent);
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.35;
+  }
+
+  .hero-mark{
+    position:absolute;
+    bottom:-90px;
+    left:50%;
+    transform:translateX(-50%);
+    width:360px;
+    height:360px;
+    color:#ffffff;
+    opacity:0.06;
+  }
+
+  .hero .container{
+    position:relative;
+    z-index:2;
+  }
+
+  .hero h1{
+    font-size:44px;
+    line-height:1.2;
+    max-width:760px;
+    margin:0 auto 22px auto;
+    color:#fff;
+  }
+
+  .hero p{
+    font-size:17px;
+    color:#C9D6DE;
+    max-width:520px;
+    margin:0 auto 34px auto;
+  }
+
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#FFFFFF;
+    padding:14px 32px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    border-radius:4px;
+  }
+
+  .btn:hover{ background:#0B8577; }
+
+  .process{
+    padding:80px 0 90px;
+    border-top:1px solid var(--line);
+  }
+
+  .process h2{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:56px;
+  }
+
+  .flow{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    position:relative;
+  }
+
+  .flow::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:6%;
+    right:6%;
+    height:1px;
+    background:var(--line);
+  }
+
+  .flow-step{
+    padding:0 18px;
+    position:relative;
+  }
+
+  .flow-step .num{
+    display:inline-block;
+    width:28px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    background:var(--bg);
+    border:1px solid var(--accent);
+    color:var(--accent);
+    border-radius:50%;
+    font-size:12px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+  }
+
+  .flow-step h3{
+    font-size:17px;
+    margin-bottom:8px;
+  }
+
+  .flow-step p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  .why{
+    position:relative;
+    overflow:hidden;
+    padding:80px 0;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .why-mark{
+    position:absolute;
+    top:-50px;
+    left:-60px;
+    width:240px;
+    height:240px;
+    color:var(--accent);
+    opacity:0.07;
+  }
+
+  .why .container{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+
+  .why h2{
+    font-size:28px;
+    margin-bottom:18px;
+  }
+
+  .why p{
+    color:var(--ink-soft);
+    max-width:440px;
+  }
+
+  .fact-panel{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:8px 30px;
+  }
+
+  .fact-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .fact-row:first-child{ border-top:none; }
+
+  .fact-row .label{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  .fact-row .value{
+    font-size:15px;
+    font-weight:500;
+    color:var(--accent);
+  }
+
+  .contact{
+    padding:90px 0 100px;
+    text-align:center;
+  }
+
+  .contact h2{
+    font-size:28px;
+    margin-bottom:16px;
+  }
+
+  .contact > .container > p{
+    color:var(--ink-soft);
+    max-width:440px;
+    margin:0 auto 40px auto;
+  }
+
+  .contact-panel{
+    max-width:420px;
+    margin:0 auto;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:36px;
+  }
+
+  .phone-link{
+    display:block;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:26px;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+
+  .email-link{
+    display:block;
+    font-size:15px;
+    text-decoration:none;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+
+  .hours{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+
+  footer{
+    background:var(--navy2);
+    color:#9FB0C0;
+    padding:34px 0;
+  }
+
+  footer .container{
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  footer svg{ width:16px; height:16px; color:var(--accent); flex-shrink:0; }
+
+  footer .foot-text p + p{ margin-top:4px; color:#6E7F90; }
+
+  @media (max-width: 760px){
+    .hero h1{ font-size:32px; }
+    .hero{ padding:80px 0 60px; }
+    .flow{ grid-template-columns:1fr; gap:34px; }
+    .flow::before{ display:none; }
+    .why .container{ grid-template-columns:1fr; }
+    nav ul{ gap:16px; }
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Clean Connection</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Acasă</a></li>
-                    <li><a href="#despre-noi">Despre Noi</a></li>
-                    <li><a href="#activitate">Domeniu de Activitate</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="recycle-mark" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="55.25" y1="20.85" x2="71.15" y2="47.65" />
+        <line x1="74.5" y1="71" x2="42.5" y2="71" />
+        <line x1="20.25" y1="62.15" x2="36.15" y2="35.35" />
+      </g>
+      <g fill="currentColor">
+        <polygon points="76.25,56.25 66.85,50.2 75.45,45.1" />
+        <polygon points="32.5,71 42.5,76 42.5,66" />
+        <polygon points="41.25,26.75 40.45,37.9 31.85,32.8" />
+      </g>
+    </symbol>
+  </defs>
+</svg>
 
-    <section class="hero-clean">
-        <h1>Eficiență și Responsabilitate în Colectarea Deșeurilor</h1>
-        <p>Optimizăm fluxurile de materiale reciclabile pentru parteneri comerciali și industriali, sprijinind tranziția spre economia circulară.</p>
-        <a href="#contact" class="cta-btn">Colaborează Cu Noi</a>
-    </section>
+<header>
+  <div class="container">
+    <a href="#" class="logo">
+      <svg viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+      Clean Connection
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#proces">Proces</a></li>
+        <li><a href="#companie">Companie</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <section id="despre-noi" class="content-section">
-        <div class="container">
-            <h2>Profilul Companiei</h2>
-            <div style="max-width: 800px; margin: 0 auto; font-size: 17px;">
-                <p style="margin-bottom: 20px;">Prin activitatea desfășurată, compania noastră contribuie activ la reducerea volumului de deșeuri depozitate, economisirea resurselor naturale și promovarea unor standarde înalte de mediu.</p>
-                <p style="margin-bottom: 20px;">Deșeurile colectate de la sursele autorizate sunt gestionate în condiții optime de siguranță, fiind direcționate ulterior spre procesele de sortare, pregătire și valorificare finală.</p>
-                <p>Ne dorim să fim un pilon de sprijin pentru companiile care pun preț pe conformitatea legislativă și pe practici ecologice sustenabile.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <svg class="hero-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+  <div class="container">
+    <h1>Fluxul tău de deșeuri, coordonat de la un capăt la altul.</h1>
+    <p>Preluăm, sortăm și direcționăm deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.</p>
+    <a href="#contact" class="btn">Programează o preluare</a>
+  </div>
+</section>
 
-    <section id="activitate" class="content-section grey">
-        <div class="container">
-            <h2>Direcții Principale de Colectare</h2>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <h3>Preluare și Sortare</h3>
-                    <p>Colectăm eficient materialele reciclabile și le pregătim conform cerințelor operaționale din industrie.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>Logistică și Transport</h3>
-                    <p>Asigurăm preluarea în condiții corespunzătoare de la sediul generatorilor autorizați, respectând graficele stabilite.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>Valorificare Ecologică</h3>
-                    <p>Direcționăm fluxurile de deșeuri către operatori specializați în vederea reintroducerii în circuitul economic.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="proces" class="process">
+  <div class="container">
+    <h2>Cum funcționează</h2>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="num mono">01</span>
+        <h3>Solicitare</h3>
+        <p>Ne transmiți tipul și cantitatea estimată de deșeuri.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">02</span>
+        <h3>Preluare</h3>
+        <p>Echipa noastră ridică materialele direct din locația ta.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">03</span>
+        <h3>Sortare</h3>
+        <p>Separăm materialele pe categorii, conform standardelor de valorificare.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">04</span>
+        <h3>Direcționare</h3>
+        <p>Le trimitem către operatori autorizați de reciclare.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="content-section">
-        <div class="container">
-            <h2>Informații de Contact</h2>
-            <div class="contact-container">
-                <p>Pentru preluări de deșeuri și stabilirea detaliilor de colaborare, luați legătura cu echipa noastră:</p>
-                <a href="tel:+40700000000" class="contact-phone">📞 +40 700 000 000</a>
-                <p style="margin-top: 15px; color: #78909c; font-size: 15px;">Disponibili de Luni până Vineri, în intervalul orar 08:00 - 17:00.</p>
-            </div>
-        </div>
-    </section>
+<section id="companie" class="why">
+  <svg class="why-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+  <div class="container">
+    <div>
+      <h2>Un singur partener pentru tot fluxul de deșeuri</h2>
+      <p>Coordonăm preluarea, sortarea și direcționarea materialelor astfel încât firma ta să nu trebuiască să gestioneze mai mulți furnizori pentru fiecare tip de deșeu.</p>
+    </div>
+    <div class="fact-panel">
+      <div class="fact-row">
+        <span class="label">Zonă acoperită</span>
+        <span class="value mono">Regional</span>
+      </div>
+      <div class="fact-row">
+        <span class="label">Timp de răspuns</span>
+        <span class="value mono">&lt; 48h</span>
+      </div>
+      <div class="fact-row">
+        <span class="label">Program</span>
+        <span class="value mono">L-V, 08-18</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <div class="container" style="display: block;">
-            <p>&copy; 2026 Clean Connection (cleanconnection.ro). Toate drepturile rezervate.</p>
-        </div>
-    </footer>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Informații de contact</h2>
+    <p>Pentru preluări de deșeuri și stabilirea detaliilor de colaborare, contactează-ne direct.</p>
+    <div class="contact-panel">
+      <a href="tel:+40791178888" class="phone-link">0791 178 888</a>
+      <a href="tel:+40769530218" class="phone-link" style="font-size:18px; margin-top:-4px;">0769 530 218</a>
+      <a href="mailto:contact@cleanconnection.ro" class="email-link">contact@cleanconnection.ro</a>
+      <div class="hours">Str. Silozului nr. 1, Târgoviște</div>
+      <div class="hours">Disponibili Luni – Vineri, 08:00 – 18:00</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <svg viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+    <div class="foot-text">
+      <p>&copy; 2026 Clean Connection (cleanconnection.ro). Toate drepturile rezervate.</p>
+      <p>Activitate de colectare și management al deșeurilor reciclabile.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
