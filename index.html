@@ -379,7 +379,20 @@
     .flow{ grid-template-columns:1fr; gap:34px; }
     .flow::before{ display:none; }
     .why .container{ grid-template-columns:1fr; }
-    nav ul{ gap:16px; }
+    header .container{
+      flex-wrap:wrap;
+      justify-content:center;
+      row-gap:10px;
+      padding:16px 0;
+    }
+    nav ul{ gap:16px; justify-content:center; }
+  }
+
+  @media (max-width: 420px){
+    .logo{ font-size:17px; }
+    .hero h1{ font-size:26px; }
+    nav ul{ gap:12px; }
+    nav a{ font-size:13px; }
   }
 </style>
 </head>
