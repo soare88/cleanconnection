@@ -424,4 +424,171 @@
     </a>
     <nav>
       <ul>
-        <li><a href="#
+        <li><a href="#proces" data-i18n="nav.proces">Proces</a></li>
+        <li><a href="#companie" data-i18n="nav.companie">Companie</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <svg class="hero-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+  <div class="container">
+    <h1 data-i18n="hero.h1">Fluxul tău de deșeuri, coordonat de la un capăt la altul.</h1>
+    <p data-i18n="hero.p">Preluăm, sortăm și direcționăm deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.</p>
+    <a href="#contact" class="btn" data-i18n="hero.cta">Programează o preluare</a>
+  </div>
+</section>
+
+<section id="proces" class="process">
+  <div class="container">
+    <h2 data-i18n="process.h2">Cum funcționează</h2>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="num mono">01</span>
+        <h3 data-i18n="step1.title">Solicitare</h3>
+        <p data-i18n="step1.desc">Ne transmiți tipul și cantitatea estimată de deșeuri.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">02</span>
+        <h3 data-i18n="step2.title">Preluare</h3>
+        <p data-i18n="step2.desc">Echipa noastră ridică materialele direct din locația ta.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">03</span>
+        <h3 data-i18n="step3.title">Sortare</h3>
+        <p data-i18n="step3.desc">Separăm materialele pe categorii, conform standardelor de valorificare.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num mono">04</span>
+        <h3 data-i18n="step4.title">Direcționare</h3>
+        <p data-i18n="step4.desc">Le trimitem către operatori autorizați de reciclare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="companie" class="why">
+  <svg class="why-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+  <div class="container">
+    <div>
+      <h2 data-i18n="why.h2">Un singur partener pentru tot fluxul de deșeuri</h2>
+      <p data-i18n="why.p">Coordonăm preluarea, sortarea și direcționarea materialelor astfel încât firma ta să nu trebuiască să gestioneze mai mulți furnizori pentru fiecare tip de deșeu.</p>
+    </div>
+    <div class="fact-panel">
+      <div class="fact-row">
+        <span class="label" data-i18n="fact1.label">Zonă acoperită</span>
+        <span class="value mono" data-i18n="fact1.value">Regional</span>
+      </div>
+      <div class="fact-row">
+        <span class="label" data-i18n="fact2.label">Timp de răspuns</span>
+        <span class="value mono">&lt; 48h</span>
+      </div>
+      <div class="fact-row">
+        <span class="label" data-i18n="fact3.label">Program</span>
+        <span class="value mono" data-i18n="fact3.value">L-V, 08-18</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 data-i18n="contact.h2">Informații de contact</h2>
+    <p data-i18n="contact.p">Pentru preluări de deșeuri și stabilirea detaliilor de colaborare, contactează-ne direct.</p>
+    <div class="contact-panel">
+      <a href="tel:+40791178888" class="phone-link">0791 178 888</a>
+      <a href="tel:+40769530218" class="phone-link" style="font-size:18px; margin-top:-4px;">0769 530 218</a>
+      <a href="mailto:contact@cleanconnection.ro" class="email-link">contact@cleanconnection.ro</a>
+      <div class="hours">Str. Silozului nr. 1, Târgoviște</div>
+      <div class="hours" data-i18n="contact.hours">Disponibili Luni – Vineri, 08:00 – 18:00</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <svg viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+    <div class="foot-text">
+      <p data-i18n="footer.copyright">&copy; 2026 Clean Connection (cleanconnection.ro). Toate drepturile rezervate.</p>
+      <p data-i18n="footer.tagline">Activitate de colectare și management al deșeurilor reciclabile.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var translations = {
+    en: {
+      "nav.proces":"Process","nav.companie":"Company","nav.contact":"Contact",
+      "hero.h1":"Your waste flow, coordinated from start to finish.",
+      "hero.p":"We collect, sort and direct our commercial partners' recyclable waste to authorized processing operators.",
+      "hero.cta":"Schedule a pickup",
+      "process.h2":"How it works",
+      "step1.title":"Request","step1.desc":"You send us the type and estimated quantity of waste.",
+      "step2.title":"Pickup","step2.desc":"Our team collects the materials directly from your location.",
+      "step3.title":"Sorting","step3.desc":"We separate the materials by category, according to recovery standards.",
+      "step4.title":"Routing","step4.desc":"We send them to authorized recycling operators.",
+      "why.h2":"A single partner for your entire waste flow",
+      "why.p":"We coordinate pickup, sorting and routing of materials so your company doesn't have to manage multiple suppliers for each type of waste.",
+      "fact1.label":"Area covered","fact1.value":"Regional",
+      "fact2.label":"Response time",
+      "fact3.label":"Hours","fact3.value":"Mon-Fri, 8-18",
+      "contact.h2":"Contact information",
+      "contact.p":"For waste pickups and collaboration details, contact us directly.",
+      "contact.hours":"Available Monday – Friday, 8:00 AM – 6:00 PM",
+      "footer.copyright":"© 2026 Clean Connection (cleanconnection.ro). All rights reserved.",
+      "footer.tagline":"Waste collection and recyclable waste management activity."
+    },
+    de: {
+      "nav.proces":"Prozess","nav.companie":"Unternehmen","nav.contact":"Kontakt",
+      "hero.h1":"Ihr Abfallfluss, von Anfang bis Ende koordiniert.",
+      "hero.p":"Wir sammeln, sortieren und leiten die recycelbaren Abfälle unserer Geschäftspartner an zugelassene Verarbeitungsbetriebe weiter.",
+      "hero.cta":"Abholung planen",
+      "process.h2":"So funktioniert es",
+      "step1.title":"Anfrage","step1.desc":"Sie teilen uns Art und geschätzte Menge des Abfalls mit.",
+      "step2.title":"Abholung","step2.desc":"Unser Team holt die Materialien direkt an Ihrem Standort ab.",
+      "step3.title":"Sortierung","step3.desc":"Wir trennen die Materialien nach Kategorien gemäß den Verwertungsstandards.",
+      "step4.title":"Weiterleitung","step4.desc":"Wir senden sie an zugelassene Recyclingbetriebe.",
+      "why.h2":"Ein einziger Partner für Ihren gesamten Abfallfluss",
+      "why.p":"Wir koordinieren Abholung, Sortierung und Weiterleitung der Materialien, damit Ihr Unternehmen nicht mehrere Lieferanten für jede Abfallart verwalten muss.",
+      "fact1.label":"Abgedecktes Gebiet","fact1.value":"Regional",
+      "fact2.label":"Reaktionszeit",
+      "fact3.label":"Geschäftszeiten","fact3.value":"Mo-Fr, 8-18 Uhr",
+      "contact.h2":"Kontaktinformationen",
+      "contact.p":"Für Abholungen und Details zur Zusammenarbeit kontaktieren Sie uns direkt.",
+      "contact.hours":"Verfügbar Montag – Freitag, 08:00 – 18:00 Uhr",
+      "footer.copyright":"© 2026 Clean Connection (cleanconnection.ro). Alle Rechte vorbehalten.",
+      "footer.tagline":"Sammlung und Management von recycelbaren Abfällen."
+    }
+  };
+
+  function detectLang(){
+    var langs = navigator.languages || [navigator.language || 'ro'];
+    for (var i=0;i<langs.length;i++){
+      var l = (langs[i]||'').slice(0,2).toLowerCase();
+      if (l==='en'||l==='de') return l;
+    }
+    return 'ro';
+  }
+
+  function applyLang(lang){
+    if (lang === 'ro') { document.documentElement.lang = 'ro'; return; }
+    var dict = translations[lang];
+    if (!dict) return;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.documentElement.lang = lang;
+  }
+
+  applyLang(detectLang());
+})();
+</script>
+
+</body>
+</html>
