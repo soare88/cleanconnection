@@ -8,11 +8,51 @@
 <meta name="description" content="Clean Connection preia, sortează și direcționează deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.">
 <meta name="keywords" content="clean connection, colectare deseuri, reciclare industriala, management deseuri">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cleanconnection.ro/">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 
+<!-- Open Graph -->
+<meta property="og:site_name" content="Clean Connection">
 <meta property="og:title" content="Clean Connection - Colectare, Sortare și Management Deșeuri">
 <meta property="og:description" content="Fluxul tău de deșeuri, coordonat de la un capăt la altul.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.cleanconnection.ro">
+<meta property="og:image" content="https://www.cleanconnection.ro/images/hero-bg.jpg">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clean Connection - Colectare, Sortare și Management Deșeuri">
+<meta name="twitter:description" content="Fluxul tău de deșeuri, coordonat de la un capăt la altul.">
+<meta name="twitter:image" content="https://www.cleanconnection.ro/images/hero-bg.jpg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Clean Connection",
+  "url": "https://www.cleanconnection.ro",
+  "image": "https://www.cleanconnection.ro/images/hero-bg.jpg",
+  "telephone": "+40791178888",
+  "email": "contact@cleanconnection.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Silozului nr. 1",
+    "addressLocality": "Târgoviște",
+    "addressCountry": "RO"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "priceRange": "$$"
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -567,6 +607,9 @@
   };
 
   function detectLang(){
+    var params = new URLSearchParams(window.location.search);
+    var forced = (params.get('lang')||'').toLowerCase();
+    if (forced==='en'||forced==='de'||forced==='ro') return forced;
     var langs = navigator.languages || [navigator.language || 'ro'];
     for (var i=0;i<langs.length;i++){
       var l = (langs[i]||'').slice(0,2).toLowerCase();
