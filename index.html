@@ -4,41 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eco Green Broker - Intermediere și Brokeraj în Reciclare</title>
-<meta name="description" content="Eco Green Broker facilitează legătura dintre generatorii de deșeuri reciclabile și operatorii autorizați de valorificare.">
-<meta name="keywords" content="broker reciclare, intermediere deșeuri, valorificare deșeuri, brokeraj reciclabile">
+<title>Clean Connection - Colectare, Sortare și Management Deșeuri</title>
+<meta name="description" content="Clean Connection preia, sortează și direcționează deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.">
+<meta name="keywords" content="clean connection, colectare deseuri, reciclare industriala, management deseuri">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.ecogreenbroker.ro/">
+<link rel="canonical" href="https://www.cleanconnection.ro/">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 
 <!-- Open Graph -->
-<meta property="og:site_name" content="Eco Green Broker">
-<meta property="og:title" content="Eco Green Broker - Intermediere și Brokeraj în Reciclare">
-<meta property="og:description" content="Facilităm legătura dintre generatorii de deșeuri și operatorii autorizați de valorificare.">
+<meta property="og:site_name" content="Clean Connection">
+<meta property="og:title" content="Clean Connection - Colectare, Sortare și Management Deșeuri">
+<meta property="og:description" content="Fluxul tău de deșeuri, coordonat de la un capăt la altul.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.ecogreenbroker.ro">
-<meta property="og:image" content="https://www.ecogreenbroker.ro/images/hero-bg.jpg">
+<meta property="og:url" content="https://www.cleanconnection.ro">
+<meta property="og:image" content="https://www.cleanconnection.ro/images/hero-bg.jpg">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Eco Green Broker - Intermediere și Brokeraj în Reciclare">
-<meta name="twitter:description" content="Facilităm legătura dintre generatorii de deșeuri și operatorii autorizați de valorificare.">
-<meta name="twitter:image" content="https://www.ecogreenbroker.ro/images/hero-bg.jpg">
+<meta name="twitter:title" content="Clean Connection - Colectare, Sortare și Management Deșeuri">
+<meta name="twitter:description" content="Fluxul tău de deșeuri, coordonat de la un capăt la altul.">
+<meta name="twitter:image" content="https://www.cleanconnection.ro/images/hero-bg.jpg">
 
 <!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Eco Green Broker",
-  "url": "https://www.ecogreenbroker.ro",
-  "image": "https://www.ecogreenbroker.ro/images/hero-bg.jpg",
-  "telephone": "+40791025888",
-  "email": "contact@ecogreenbroker.ro",
+  "name": "Clean Connection",
+  "url": "https://www.cleanconnection.ro",
+  "image": "https://www.cleanconnection.ro/images/hero-bg.jpg",
+  "telephone": "+40791178888",
+  "email": "contact@cleanconnection.ro",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Str. Silozului nr. 1",
+    "addressLocality": "Târgoviște",
     "addressCountry": "RO"
   },
   "openingHoursSpecification": {
@@ -53,34 +56,39 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --ink:#16241A;
-    --ink-soft:#4B5A4F;
-    --cream:#FAF8F2;
-    --accent:#4C8B5A;
-    --line:#DDE3D9;
+    --bg:#FFFFFF;
+    --surface:#F1F4F6;
+    --ink:#10233F;
+    --ink-soft:#54636F;
+    --accent:#0E9C8C;
+    --line:#DCE2E6;
+    --navy1:#081222;
+    --navy2:#10233F;
   }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
 
   body{
-    background:var(--cream);
+    background:var(--bg);
     color:var(--ink);
     font-family:'Inter', sans-serif;
     line-height:1.6;
     font-size:16px;
   }
 
-  h1, h2{
-    font-family:'Newsreader', serif;
+  h1, h2, h3{
+    font-family:'Space Grotesk', sans-serif;
     font-weight:600;
     letter-spacing:-0.01em;
   }
 
-  a{ color:inherit; }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
 
   .container{
     width:90%;
@@ -88,11 +96,13 @@
     margin:0 auto;
   }
 
+  a{ color:inherit; }
+
   /* Header */
   header{
     position:sticky;
     top:0;
-    background:var(--cream);
+    background:var(--bg);
     border-bottom:1px solid var(--line);
     z-index:100;
   }
@@ -107,198 +117,313 @@
   .logo{
     display:flex;
     align-items:center;
-    gap:10px;
-    font-family:'Newsreader', serif;
-    font-weight:600;
+    gap:9px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
     font-size:19px;
     text-decoration:none;
     color:var(--ink);
   }
 
-  .logo svg{ flex-shrink:0; }
+  .logo svg{ width:22px; height:22px; color:var(--accent); }
 
   nav ul{
     list-style:none;
     display:flex;
-    gap:30px;
+    gap:32px;
   }
 
   nav a{
     text-decoration:none;
-    font-size:15px;
+    font-size:14.5px;
+    font-weight:500;
     color:var(--ink-soft);
+    transition:color .2s;
   }
 
   nav a:hover{ color:var(--ink); }
 
-  /* Hero — background photo with dark overlay */
+  /* Hero with background imagery */
   .hero{
     position:relative;
-    min-height:78vh;
-    display:flex;
-    align-items:center;
-    background-image: linear-gradient(rgba(12,20,14,.72), rgba(12,20,14,.8)), url('images/hero-bg.jpg');
+    overflow:hidden;
+    background-image: linear-gradient(135deg, rgba(8,18,34,0.82) 0%, rgba(16,35,63,0.76) 55%, rgba(14,74,69,0.65) 130%), url('images/hero-bg.jpg');
     background-size:cover;
     background-position:center;
-    color:var(--cream);
+    padding:130px 0 100px;
+    text-align:center;
+    color:#fff;
+  }
+
+  .hero-pattern{
+    position:absolute;
+    inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.07'%3E%3Cline x1='40' y1='18' x2='52' y2='38'/%3E%3Cline x1='55' y1='55' x2='28' y2='55'/%3E%3Cline x1='18' y1='48' x2='30' y2='28'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat;
+  }
+
+  .hero-glow{
+    position:absolute;
+    top:-160px;
+    right:-140px;
+    width:420px;
+    height:420px;
+    background:var(--accent);
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.35;
+  }
+
+  .hero-mark{
+    position:absolute;
+    bottom:-90px;
+    left:50%;
+    transform:translateX(-50%);
+    width:360px;
+    height:360px;
+    color:#ffffff;
+    opacity:0.06;
   }
 
   .hero .container{
-    padding:100px 0;
+    position:relative;
+    z-index:2;
   }
 
   .hero h1{
     font-size:44px;
-    line-height:1.22;
-    max-width:640px;
-    margin-bottom:22px;
+    line-height:1.2;
+    max-width:760px;
+    margin:0 auto 22px auto;
+    color:#fff;
   }
 
   .hero p{
     font-size:17px;
-    max-width:480px;
-    color:#E4E9E1;
-    margin-bottom:32px;
+    color:#C9D6DE;
+    max-width:520px;
+    margin:0 auto 34px auto;
   }
 
   .btn{
     display:inline-block;
-    background:var(--cream);
-    color:var(--ink);
+    background:var(--accent);
+    color:#FFFFFF;
     padding:14px 32px;
     text-decoration:none;
     font-size:15px;
     font-weight:600;
-    border-radius:3px;
+    border-radius:4px;
   }
 
-  .btn:hover{ background:#EDE7D8; }
+  .btn:hover{ background:#0B8577; }
 
-  /* Despre */
-  .about{
-    padding:80px 0;
-  }
-
-  .about .container{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:60px;
-  }
-
-  .about h2{
-    font-size:28px;
-    margin-bottom:20px;
-  }
-
-  .about p{
-    color:var(--ink-soft);
-    margin-bottom:16px;
-    max-width:480px;
-  }
-
-  .about-facts .fact{
-    padding:16px 0;
+  /* Process */
+  .process{
+    padding:80px 0 90px;
     border-top:1px solid var(--line);
   }
 
-  .about-facts .fact:last-child{ border-bottom:1px solid var(--line); }
+  .process h2{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:56px;
+  }
 
-  .fact .label{ font-size:13px; color:var(--ink-soft); margin-bottom:4px; }
-  .fact .value{ font-family:'Newsreader', serif; font-size:18px; }
+  .flow{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    position:relative;
+  }
+
+  .flow::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:6%;
+    right:6%;
+    height:1px;
+    background:var(--line);
+  }
+
+  .flow-step{
+    padding:0 18px;
+    position:relative;
+  }
+
+  .flow-step .num{
+    display:inline-block;
+    width:28px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    background:var(--bg);
+    border:1px solid var(--accent);
+    color:var(--accent);
+    border-radius:50%;
+    font-size:12px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+  }
+
+  .flow-step h3{
+    font-size:17px;
+    margin-bottom:8px;
+  }
+
+  .flow-step p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
 
   /* Materiale */
   .materials{
-    padding:80px 0;
-    background:#F2F0E6;
+    padding:80px 0 90px;
+    background:var(--surface);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
 
   .materials h2{
     font-size:28px;
-    margin-bottom:36px;
-  }
-
-  .material-row{
-    display:grid;
-    grid-template-columns:20px 200px 1fr;
-    gap:24px;
-    align-items:start;
-    padding:24px 0;
-    border-top:1px solid var(--line);
-  }
-
-  .material-row:last-child{ border-bottom:1px solid var(--line); }
-
-  .material-row .swatch{
-    width:16px; height:16px; margin-top:4px; border-radius:50%;
-  }
-
-  .material-row h3{
-    font-family:'Newsreader', serif;
-    font-size:19px;
-    font-weight:600;
-  }
-
-  .material-row p{
-    color:var(--ink-soft);
-    max-width:480px;
-  }
-
-  /* Oportunitati */
-  .opportunities{
-    padding:80px 0;
-  }
-
-  .opportunities h2{
-    font-size:28px;
+    text-align:center;
     margin-bottom:14px;
   }
 
-  .opp-row{
+  .materials > .container > p{
+    text-align:center;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto 50px auto;
+  }
+
+  .materials-grid{
     display:grid;
-    grid-template-columns:36px 1fr;
-    gap:20px;
-    align-items:start;
-    padding:24px 0;
-    border-top:1px solid var(--line);
+    grid-template-columns:repeat(5, 1fr);
+    gap:18px;
   }
 
-  .opp-row:last-child{ border-bottom:1px solid var(--line); }
+  .material-card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:26px 18px;
+    text-align:center;
+  }
 
-  .opp-row .opp-num{
-    font-family:'Newsreader', serif;
-    font-size:19px;
+  .material-card svg{
+    width:26px;
+    height:26px;
     color:var(--accent);
+    margin-bottom:14px;
   }
 
-  .opp-row h3{
-    font-family:'Newsreader', serif;
-    font-size:19px;
-    font-weight:600;
+  .material-card h3{
+    font-size:14.5px;
     margin-bottom:6px;
   }
 
-  .opp-row p{
+  .material-card .code{
+    display:block;
+    font-size:11.5px;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+
+  .material-card p{
+    font-size:12.5px;
     color:var(--ink-soft);
-    max-width:560px;
+  }
+
+  /* Why section */
+  .why{
+    position:relative;
+    overflow:hidden;
+    padding:80px 0;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .why-mark{
+    position:absolute;
+    top:-50px;
+    left:-60px;
+    width:240px;
+    height:240px;
+    color:var(--accent);
+    opacity:0.07;
+  }
+
+  .why .container{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+
+  .why h2{
+    font-size:28px;
+    margin-bottom:18px;
+  }
+
+  .why p{
+    color:var(--ink-soft);
+    max-width:440px;
+  }
+
+  .fact-panel{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:8px 30px;
+  }
+
+  .fact-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .fact-row:first-child{ border-top:none; }
+
+  .fact-row .label{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  .fact-row .value{
+    font-size:15px;
+    font-weight:500;
+    color:var(--accent);
   }
 
   /* Contact */
   .contact{
-    padding:80px 0 90px;
+    padding:90px 0 100px;
+    text-align:center;
   }
 
   .contact h2{
     font-size:28px;
-    margin-bottom:24px;
-    text-align:center;
+    margin-bottom:16px;
+  }
+
+  .contact > .container > p{
+    color:var(--ink-soft);
+    max-width:440px;
+    margin:0 auto 40px auto;
   }
 
   .contact-panel{
     max-width:420px;
     margin:0 auto;
-    text-align:center;
     border:1px solid var(--line);
     border-radius:8px;
     padding:36px;
@@ -306,7 +431,7 @@
 
   .phone-link{
     display:block;
-    font-family:'Newsreader', serif;
+    font-family:'Space Grotesk', sans-serif;
     font-size:26px;
     font-weight:600;
     text-decoration:none;
@@ -322,25 +447,38 @@
     margin-bottom:14px;
   }
 
-  .hours{ font-size:14px; color:var(--ink-soft); }
+  .hours{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
 
   /* Footer */
   footer{
-    background:var(--ink);
-    color:#B9C4B9;
-    padding:32px 0;
+    background:var(--navy2);
+    color:#9FB0C0;
+    padding:34px 0;
   }
 
-  footer .container{ font-size:13px; }
-  footer p + p{ margin-top:4px; color:#7C8A7C; }
+  footer .container{
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
 
-  @media (max-width:760px){
+  footer svg{ width:16px; height:16px; color:var(--accent); flex-shrink:0; }
+
+  footer .foot-text p + p{ margin-top:4px; color:#6E7F90; }
+
+  /* Responsive */
+  @media (max-width: 760px){
     .hero h1{ font-size:32px; }
-    .hero .container{ padding:70px 0; }
-    .about .container{ grid-template-columns:1fr; }
-    .material-row{ grid-template-columns:16px 1fr; }
-    .material-row h3, .material-row p{ grid-column:2; }
-    .opp-row{ grid-template-columns:24px 1fr; }
+    .hero{ padding:80px 0 60px; }
+    .flow{ grid-template-columns:1fr; gap:34px; }
+    .flow::before{ display:none; }
+    .why .container{ grid-template-columns:1fr; }
+    .materials-grid{ grid-template-columns:repeat(2, 1fr); }
     header .container{
       flex-wrap:wrap;
       justify-content:center;
@@ -350,7 +488,7 @@
     nav ul{ gap:16px; justify-content:center; }
   }
 
-  @media (max-width:420px){
+  @media (max-width: 420px){
     .logo{ font-size:17px; }
     .hero h1{ font-size:26px; }
     nav ul{ gap:12px; }
@@ -360,19 +498,59 @@
 </head>
 <body>
 
+<!-- Shared icon defs: recycling mark -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="recycle-mark" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="55.25" y1="20.85" x2="71.15" y2="47.65" />
+        <line x1="74.5" y1="71" x2="42.5" y2="71" />
+        <line x1="20.25" y1="62.15" x2="36.15" y2="35.35" />
+      </g>
+      <g fill="currentColor">
+        <polygon points="76.25,56.25 66.85,50.2 75.45,45.1" />
+        <polygon points="32.5,71 42.5,76 42.5,66" />
+        <polygon points="41.25,26.75 40.45,37.9 31.85,32.8" />
+      </g>
+    </symbol>
+    <symbol id="icon-paper" viewBox="0 0 24 24">
+      <path d="M6 3h9l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M15 3v4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <line x1="9" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="9" y1="16" x2="16" y2="16" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="icon-plastic" viewBox="0 0 24 24">
+      <path d="M10 2h4v3l2 2v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V7l2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <line x1="9" y1="11" x2="15" y2="11" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="icon-wood" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="12" r="4.8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="12" cy="12" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-glass" viewBox="0 0 24 24">
+      <path d="M10 2h4v3.5l1.5 2.5V20a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2V8l1.5-2.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <line x1="10" y1="2" x2="14" y2="2" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="icon-deee" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="8" y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="12" y1="16" x2="12" y2="20" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header>
   <div class="container">
     <a href="#" class="logo">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2 L15 8 L9 8 Z M4 20 L7 14 L1 14 Z M23 14 L17 14 L20 20 Z" fill="#4C8B5A"/>
-      </svg>
-      Eco Green Broker
+      <svg viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+      Clean Connection
     </a>
     <nav>
       <ul>
-        <li><a href="#despre" data-i18n="nav.despre">Despre</a></li>
-        <li><a href="#materiale" data-i18n="nav.materiale">Servicii</a></li>
-        <li><a href="#oportunitati" data-i18n="nav.oportunitati">Oportunități</a></li>
+        <li><a href="#proces" data-i18n="nav.proces">Proces</a></li>
+        <li><a href="#materiale" data-i18n="nav.materiale">Materiale</a></li>
+        <li><a href="#companie" data-i18n="nav.companie">Companie</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
@@ -380,36 +558,39 @@
 </header>
 
 <section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <svg class="hero-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
   <div class="container">
-    <h1 data-i18n="hero.h1">Legătura de încredere dintre generatori și operatori autorizați.</h1>
-    <p data-i18n="hero.p">Eco Green Broker facilitează intermedierea deșeurilor reciclabile, fără a intra fizic în posesia mărfii — doar conexiunea potrivită, la momentul potrivit.</p>
-    <a href="#contact" class="btn" data-i18n="hero.cta">Ia legătura cu noi</a>
+    <h1 data-i18n="hero.h1">Fluxul tău de deșeuri, coordonat de la un capăt la altul.</h1>
+    <p data-i18n="hero.p">Preluăm, sortăm și direcționăm deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare.</p>
+    <a href="#contact" class="btn" data-i18n="hero.cta">Programează o preluare</a>
   </div>
 </section>
 
-<section id="despre" class="about">
+<section id="proces" class="process">
   <div class="container">
-    <div>
-      <h2 data-i18n="about.h2">Rol de broker, nu de operator</h2>
-      <p data-i18n="about.p1">Suntem o societate de broker specializată în colectarea deșeurilor reciclabile, fără a intra fizic în posesia acestora — facem legătura dintre firmele care generează deșeuri și operatorii autorizați care le valorifică.</p>
-      <p data-i18n="about.p2">Activitatea se desfășoară în baza autorizației de mediu deținute, cu respectarea integrală a reglementărilor legale privind intermedierea deșeurilor reciclabile.</p>
-    </div>
-    <div class="about-facts">
-      <div class="fact">
-        <div class="label" data-i18n="fact1.label">Rol</div>
-        <div class="value" data-i18n="fact1.value">Brokeraj / intermediere</div>
+    <h2 data-i18n="process.h2">Cum funcționează</h2>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="num mono">01</span>
+        <h3 data-i18n="step1.title">Solicitare</h3>
+        <p data-i18n="step1.desc">Ne transmiți tipul și cantitatea estimată de deșeuri.</p>
       </div>
-      <div class="fact">
-        <div class="label" data-i18n="fact2.label">Autorizare</div>
-        <div class="value" data-i18n="fact2.value">Autorizație de mediu valabilă</div>
+      <div class="flow-step">
+        <span class="num mono">02</span>
+        <h3 data-i18n="step2.title">Preluare</h3>
+        <p data-i18n="step2.desc">Echipa noastră ridică materialele direct din locația ta.</p>
       </div>
-      <div class="fact">
-        <div class="label" data-i18n="fact3.label">Fără</div>
-        <div class="value" data-i18n="fact3.value">Manipulare fizică a mărfii</div>
+      <div class="flow-step">
+        <span class="num mono">03</span>
+        <h3 data-i18n="step3.title">Sortare</h3>
+        <p data-i18n="step3.desc">Separăm materialele pe categorii, conform standardelor de valorificare.</p>
       </div>
-      <div class="fact">
-        <div class="label" data-i18n="fact4.label">Parteneri</div>
-        <div class="value" data-i18n="fact4.value">Operatori autorizați de valorificare</div>
+      <div class="flow-step">
+        <span class="num mono">04</span>
+        <h3 data-i18n="step4.title">Direcționare</h3>
+        <p data-i18n="step4.desc">Le trimitem către operatori autorizați de reciclare.</p>
       </div>
     </div>
   </div>
@@ -417,56 +598,62 @@
 
 <section id="materiale" class="materials">
   <div class="container">
-    <h2 data-i18n="materials.h2">Materiale intermediate</h2>
-
-    <div class="material-row">
-      <span class="swatch" style="background:#A8763E"></span>
-      <h3 data-i18n="mat1.title">Hârtie și carton</h3>
-      <p data-i18n="mat1.desc">Identificăm soluții eficiente de preluare și valorificare pentru volume de hârtie și carton.</p>
-    </div>
-
-    <div class="material-row">
-      <span class="swatch" style="background:#3E6E82"></span>
-      <h3 data-i18n="mat2.title">Plastic</h3>
-      <p data-i18n="mat2.desc">Facilităm intermedierea fluxurilor de deșeuri plastice — folii, ambalaje și mase plastice industriale.</p>
+    <h2 data-i18n="materials.h2">Materiale colectate</h2>
+    <p data-i18n="materials.intro">Preluăm o gamă variată de deșeuri reciclabile, clasificate conform codurilor europene de deșeuri.</p>
+    <div class="materials-grid">
+      <div class="material-card">
+        <svg viewBox="0 0 24 24"><use href="#icon-paper"/></svg>
+        <h3 data-i18n="mat1.title">Hârtie și carton</h3>
+        <span class="code mono">15.01.01</span>
+        <p data-i18n="mat1.desc">Ambalaje și deșeuri papetare.</p>
+      </div>
+      <div class="material-card">
+        <svg viewBox="0 0 24 24"><use href="#icon-plastic"/></svg>
+        <h3 data-i18n="mat2.title">Plastic și folie</h3>
+        <span class="code mono">15.01.02</span>
+        <p data-i18n="mat2.desc">Mase plastice și folii industriale.</p>
+      </div>
+      <div class="material-card">
+        <svg viewBox="0 0 24 24"><use href="#icon-wood"/></svg>
+        <h3 data-i18n="mat3.title">Lemn</h3>
+        <span class="code mono">15.01.03</span>
+        <p data-i18n="mat3.desc">Ambalaje și deșeuri lemnoase.</p>
+      </div>
+      <div class="material-card">
+        <svg viewBox="0 0 24 24"><use href="#icon-glass"/></svg>
+        <h3 data-i18n="mat4.title">Sticlă</h3>
+        <span class="code mono">15.01.07</span>
+        <p data-i18n="mat4.desc">Ambalaje din sticlă, colectate separat.</p>
+      </div>
+      <div class="material-card">
+        <svg viewBox="0 0 24 24"><use href="#icon-deee"/></svg>
+        <h3 data-i18n="mat5.title">Deșeuri electrice</h3>
+        <span class="code mono">20.01.36</span>
+        <p data-i18n="mat5.desc">Echipamente electrice și electrocasnice (DEEE).</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="oportunitati" class="opportunities">
+<section id="companie" class="why">
+  <svg class="why-mark" viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
   <div class="container">
-    <h2 data-i18n="opp.h2">Oportunități de business</h2>
-    <p style="color:var(--ink-soft); max-width:600px; margin-bottom:36px;" data-i18n="opp.intro">Pe lângă activitatea de bază de brokeraj, explorăm constant direcții de extindere care aduc valoare partenerilor noștri:</p>
-
-    <div class="opp-row">
-      <span class="opp-num">01</span>
-      <div>
-        <h3 data-i18n="opp1.title">Dezvoltarea infrastructurii de colectare și reciclare</h3>
-        <p data-i18n="opp1.desc">Parteneriate cu administrații locale (primării) pentru colectarea deșeurilor reciclabile.</p>
-      </div>
+    <div>
+      <h2 data-i18n="why.h2">Un singur partener pentru tot fluxul de deșeuri</h2>
+      <p data-i18n="why.p">Coordonăm preluarea, sortarea și direcționarea materialelor astfel încât firma ta să nu trebuiască să gestioneze mai mulți furnizori pentru fiecare tip de deșeu.</p>
     </div>
-
-    <div class="opp-row">
-      <span class="opp-num">02</span>
-      <div>
-        <h3 data-i18n="opp2.title">Valorificarea deșeurilor ca materie primă</h3>
-        <p data-i18n="opp2.desc">Comercializarea deșeurilor reciclabile către companii de reciclare sau fabrici care folosesc material reciclat.</p>
+    <div class="fact-panel">
+      <div class="fact-row">
+        <span class="label" data-i18n="fact1.label">Zonă acoperită</span>
+        <span class="value mono" data-i18n="fact1.value">Regional</span>
       </div>
-    </div>
-
-    <div class="opp-row">
-      <span class="opp-num">03</span>
-      <div>
-        <h3 data-i18n="opp3.title">Parteneriate industriale</h3>
-        <p data-i18n="opp3.desc">Colaborare cu companii industriale (fabrici, construcții) pentru colectarea și reciclarea deșeurilor generate, inclusiv participarea la inițiative de parteneriat public-privat pentru infrastructură de mediu.</p>
+      <div class="fact-row">
+        <span class="label" data-i18n="fact2.label">Timp de răspuns</span>
+        <span class="value mono">&lt; 48h</span>
       </div>
-    </div>
-
-    <div class="opp-row">
-      <span class="opp-num">04</span>
-      <div>
-        <h3 data-i18n="opp4.title">Servicii de consultanță de mediu</h3>
-        <p data-i18n="opp4.desc">Sprijin pentru companii în gestionarea deșeurilor, implementarea politicilor de reciclare și obținerea certificărilor de mediu.</p>
+      <div class="fact-row">
+        <span class="label" data-i18n="fact3.label">Program</span>
+        <span class="value mono" data-i18n="fact3.value">L-V, 08-18</span>
       </div>
     </div>
   </div>
@@ -474,19 +661,25 @@
 
 <section id="contact" class="contact">
   <div class="container">
-    <h2 data-i18n="contact.h2">Date de contact</h2>
+    <h2 data-i18n="contact.h2">Informații de contact</h2>
+    <p data-i18n="contact.p">Pentru preluări de deșeuri și stabilirea detaliilor de colaborare, contactează-ne direct.</p>
     <div class="contact-panel">
-      <a href="tel:+40791025888" class="phone-link">0791 025 888</a>
-      <a href="mailto:contact@ecogreenbroker.ro" class="email-link">contact@ecogreenbroker.ro</a>
-      <div class="hours" data-i18n="contact.hours">Luni – Vineri, 08:00 – 18:00</div>
+      <a href="tel:+40791178888" class="phone-link">0791 178 888</a>
+      <a href="tel:+40769530218" class="phone-link" style="font-size:18px; margin-top:-4px;">0769 530 218</a>
+      <a href="mailto:contact@cleanconnection.ro" class="email-link">contact@cleanconnection.ro</a>
+      <div class="hours">Str. Silozului nr. 1, Târgoviște</div>
+      <div class="hours" data-i18n="contact.hours">Disponibili Luni – Vineri, 08:00 – 18:00</div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p data-i18n="footer.copyright">&copy; 2026 Eco Green Broker (ecogreenbroker.ro). Toate drepturile rezervate.</p>
-    <p data-i18n="footer.tagline">Activitate exclusivă de intermediere și brokeraj în domeniul gestionării deșeurilor reciclabile.</p>
+    <svg viewBox="0 0 100 100"><use href="#recycle-mark"/></svg>
+    <div class="foot-text">
+      <p data-i18n="footer.copyright">&copy; 2026 Clean Connection (cleanconnection.ro). Toate drepturile rezervate.</p>
+      <p data-i18n="footer.tagline">Activitate de colectare și management al deșeurilor reciclabile.</p>
+    </div>
   </div>
 </footer>
 
@@ -494,56 +687,64 @@
 (function(){
   var translations = {
     en: {
-      "nav.despre":"About","nav.materiale":"Services","nav.oportunitati":"Opportunities","nav.contact":"Contact",
-      "hero.h1":"The trusted link between generators and authorized operators.",
-      "hero.p":"Eco Green Broker facilitates the intermediation of recyclable waste, without physically taking possession of the goods — just the right connection, at the right time.",
-      "hero.cta":"Get in touch",
-      "about.h2":"A broker's role, not an operator's",
-      "about.p1":"We are a brokerage company specialized in recyclable waste collection, without physically taking possession of it — we connect companies that generate waste with authorized operators that recover it.",
-      "about.p2":"The activity is carried out under our valid environmental permit, in full compliance with legal regulations on the intermediation of recyclable waste.",
-      "fact1.label":"Role","fact1.value":"Brokerage / intermediation",
-      "fact2.label":"Authorization","fact2.value":"Valid environmental permit",
-      "fact3.label":"Without","fact3.value":"Physical handling of the goods",
-      "fact4.label":"Partners","fact4.value":"Authorized recovery operators",
-      "materials.h2":"Materials we intermediate",
-      "mat1.title":"Paper and cardboard","mat1.desc":"We identify efficient collection and recovery solutions for paper and cardboard volumes.",
-      "mat2.title":"Plastic","mat2.desc":"We facilitate the intermediation of plastic waste flows — film, packaging and industrial plastics.",
-      "opp.h2":"Business opportunities",
-      "opp.intro":"Beyond our core brokerage activity, we constantly explore expansion directions that bring value to our partners:",
-      "opp1.title":"Developing collection and recycling infrastructure","opp1.desc":"Partnerships with local authorities (municipalities) for the collection of recyclable waste.",
-      "opp2.title":"Recovering waste as raw material","opp2.desc":"Selling recyclable waste to recycling companies or factories that use recycled material.",
-      "opp3.title":"Industrial partnerships","opp3.desc":"Collaboration with industrial companies (factories, construction) for the collection and recycling of the waste they generate, including participation in public-private partnership initiatives for environmental infrastructure.",
-      "opp4.title":"Environmental consulting services","opp4.desc":"Support for companies in waste management, implementing recycling policies and obtaining environmental certifications.",
-      "contact.h2":"Contact details",
-      "contact.hours":"Monday – Friday, 8:00 AM – 6:00 PM",
-      "footer.copyright":"© 2026 Eco Green Broker (ecogreenbroker.ro). All rights reserved.",
-      "footer.tagline":"Exclusive intermediation and brokerage activity in the field of recyclable waste management."
+      "meta.title":"Clean Connection - Waste Collection, Sorting and Management",
+      "meta.description":"Clean Connection collects, sorts and routes commercial partners' recyclable waste to authorized processing operators.",
+      "nav.proces":"Process","nav.materiale":"Materials","nav.companie":"Company","nav.contact":"Contact",
+      "hero.h1":"Your waste flow, coordinated from start to finish.",
+      "hero.p":"We collect, sort and direct our commercial partners' recyclable waste to authorized processing operators.",
+      "hero.cta":"Schedule a pickup",
+      "process.h2":"How it works",
+      "step1.title":"Request","step1.desc":"You send us the type and estimated quantity of waste.",
+      "step2.title":"Pickup","step2.desc":"Our team collects the materials directly from your location.",
+      "step3.title":"Sorting","step3.desc":"We separate the materials by category, according to recovery standards.",
+      "step4.title":"Routing","step4.desc":"We send them to authorized recycling operators.",
+      "materials.h2":"Materials we collect",
+      "materials.intro":"We collect a wide range of recyclable waste, classified according to European waste codes.",
+      "mat1.title":"Paper and cardboard","mat1.desc":"Packaging and paper waste.",
+      "mat2.title":"Plastic and film","mat2.desc":"Industrial plastics and film.",
+      "mat3.title":"Wood","mat3.desc":"Wooden packaging and waste.",
+      "mat4.title":"Glass","mat4.desc":"Glass packaging, collected separately.",
+      "mat5.title":"Electrical waste","mat5.desc":"Electrical and household appliances (WEEE).",
+      "why.h2":"A single partner for your entire waste flow",
+      "why.p":"We coordinate pickup, sorting and routing of materials so your company doesn't have to manage multiple suppliers for each type of waste.",
+      "fact1.label":"Area covered","fact1.value":"Regional",
+      "fact2.label":"Response time",
+      "fact3.label":"Hours","fact3.value":"Mon-Fri, 8-18",
+      "contact.h2":"Contact information",
+      "contact.p":"For waste pickups and collaboration details, contact us directly.",
+      "contact.hours":"Available Monday – Friday, 8:00 AM – 6:00 PM",
+      "footer.copyright":"© 2026 Clean Connection (cleanconnection.ro). All rights reserved.",
+      "footer.tagline":"Waste collection and recyclable waste management activity."
     },
     de: {
-      "nav.despre":"Über uns","nav.materiale":"Leistungen","nav.oportunitati":"Chancen","nav.contact":"Kontakt",
-      "hero.h1":"Die vertrauenswürdige Verbindung zwischen Erzeugern und zugelassenen Betreibern.",
-      "hero.p":"Eco Green Broker vermittelt recycelbare Abfälle, ohne die Ware physisch in Besitz zu nehmen — nur die richtige Verbindung, zum richtigen Zeitpunkt.",
-      "hero.cta":"Kontaktieren Sie uns",
-      "about.h2":"Rolle als Broker, nicht als Betreiber",
-      "about.p1":"Wir sind ein auf die Vermittlung recycelbarer Abfälle spezialisiertes Maklerunternehmen, ohne die Ware physisch in Besitz zu nehmen — wir verbinden Unternehmen, die Abfälle erzeugen, mit zugelassenen Betreibern, die sie verwerten.",
-      "about.p2":"Die Tätigkeit wird auf Grundlage unserer gültigen Umweltgenehmigung ausgeübt, unter vollständiger Einhaltung der gesetzlichen Vorschriften zur Vermittlung recycelbarer Abfälle.",
-      "fact1.label":"Rolle","fact1.value":"Maklertätigkeit / Vermittlung",
-      "fact2.label":"Genehmigung","fact2.value":"Gültige Umweltgenehmigung",
-      "fact3.label":"Ohne","fact3.value":"Physische Handhabung der Ware",
-      "fact4.label":"Partner","fact4.value":"Zugelassene Verwertungsbetriebe",
-      "materials.h2":"Vermittelte Materialien",
-      "mat1.title":"Papier und Karton","mat1.desc":"Wir identifizieren effiziente Sammel- und Verwertungslösungen für Papier- und Kartonmengen.",
-      "mat2.title":"Kunststoff","mat2.desc":"Wir vermitteln Kunststoffabfallströme — Folien, Verpackungen und industrielle Kunststoffe.",
-      "opp.h2":"Geschäftschancen",
-      "opp.intro":"Neben unserer Kerntätigkeit als Makler erkunden wir ständig Erweiterungsmöglichkeiten, die unseren Partnern einen Mehrwert bieten:",
-      "opp1.title":"Entwicklung der Sammel- und Recyclinginfrastruktur","opp1.desc":"Partnerschaften mit lokalen Behörden (Gemeinden) zur Sammlung recycelbarer Abfälle.",
-      "opp2.title":"Verwertung von Abfällen als Rohstoff","opp2.desc":"Verkauf von recycelbaren Abfällen an Recyclingunternehmen oder Fabriken, die recyceltes Material verwenden.",
-      "opp3.title":"Industrielle Partnerschaften","opp3.desc":"Zusammenarbeit mit Industrieunternehmen (Fabriken, Bauwesen) zur Sammlung und zum Recycling ihrer Abfälle, einschließlich der Teilnahme an öffentlich-privaten Partnerschaftsinitiativen für Umweltinfrastruktur.",
-      "opp4.title":"Umweltberatungsdienste","opp4.desc":"Unterstützung für Unternehmen im Abfallmanagement, bei der Umsetzung von Recyclingrichtlinien und beim Erwerb von Umweltzertifizierungen.",
-      "contact.h2":"Kontaktdaten",
-      "contact.hours":"Montag – Freitag, 08:00 – 18:00 Uhr",
-      "footer.copyright":"© 2026 Eco Green Broker (ecogreenbroker.ro). Alle Rechte vorbehalten.",
-      "footer.tagline":"Ausschließliche Vermittlungs- und Maklertätigkeit im Bereich des Managements recycelbarer Abfälle."
+      "meta.title":"Clean Connection - Abfallsammlung, Sortierung und Management",
+      "meta.description":"Clean Connection sammelt, sortiert und leitet die recycelbaren Abfälle von Geschäftspartnern an zugelassene Verarbeitungsbetriebe weiter.",
+      "nav.proces":"Prozess","nav.materiale":"Materialien","nav.companie":"Unternehmen","nav.contact":"Kontakt",
+      "hero.h1":"Ihr Abfallfluss, von Anfang bis Ende koordiniert.",
+      "hero.p":"Wir sammeln, sortieren und leiten die recycelbaren Abfälle unserer Geschäftspartner an zugelassene Verarbeitungsbetriebe weiter.",
+      "hero.cta":"Abholung planen",
+      "process.h2":"So funktioniert es",
+      "step1.title":"Anfrage","step1.desc":"Sie teilen uns Art und geschätzte Menge des Abfalls mit.",
+      "step2.title":"Abholung","step2.desc":"Unser Team holt die Materialien direkt an Ihrem Standort ab.",
+      "step3.title":"Sortierung","step3.desc":"Wir trennen die Materialien nach Kategorien gemäß den Verwertungsstandards.",
+      "step4.title":"Weiterleitung","step4.desc":"Wir senden sie an zugelassene Recyclingbetriebe.",
+      "materials.h2":"Materialien, die wir sammeln",
+      "materials.intro":"Wir sammeln eine breite Palette recycelbarer Abfälle, klassifiziert nach europäischen Abfallcodes.",
+      "mat1.title":"Papier und Karton","mat1.desc":"Verpackungen und Papierabfälle.",
+      "mat2.title":"Kunststoff und Folie","mat2.desc":"Industrielle Kunststoffe und Folien.",
+      "mat3.title":"Holz","mat3.desc":"Holzverpackungen und -abfälle.",
+      "mat4.title":"Glas","mat4.desc":"Glasverpackungen, getrennt gesammelt.",
+      "mat5.title":"Elektroschrott","mat5.desc":"Elektro- und Elektrohaushaltsgeräte.",
+      "why.h2":"Ein einziger Partner für Ihren gesamten Abfallfluss",
+      "why.p":"Wir koordinieren Abholung, Sortierung und Weiterleitung der Materialien, damit Ihr Unternehmen nicht mehrere Lieferanten für jede Abfallart verwalten muss.",
+      "fact1.label":"Abgedecktes Gebiet","fact1.value":"Regional",
+      "fact2.label":"Reaktionszeit",
+      "fact3.label":"Geschäftszeiten","fact3.value":"Mo-Fr, 8-18 Uhr",
+      "contact.h2":"Kontaktinformationen",
+      "contact.p":"Für Abholungen und Details zur Zusammenarbeit kontaktieren Sie uns direkt.",
+      "contact.hours":"Verfügbar Montag – Freitag, 08:00 – 18:00 Uhr",
+      "footer.copyright":"© 2026 Clean Connection (cleanconnection.ro). Alle Rechte vorbehalten.",
+      "footer.tagline":"Sammlung und Management von recycelbaren Abfällen."
     }
   };
 
@@ -559,6 +760,22 @@
     return 'ro';
   }
 
+  function updateSeoMeta(lang, dict){
+    if (dict["meta.title"]) document.title = dict["meta.title"];
+    var desc = dict["meta.description"];
+    if (!desc) return;
+    var descTargets = ['meta[name="description"]','meta[property="og:description"]','meta[name="twitter:description"]'];
+    var titleTargets = ['meta[property="og:title"]','meta[name="twitter:title"]'];
+    descTargets.forEach(function(sel){
+      var el = document.querySelector(sel);
+      if (el) el.setAttribute('content', desc);
+    });
+    titleTargets.forEach(function(sel){
+      var el = document.querySelector(sel);
+      if (el && dict["meta.title"]) el.setAttribute('content', dict["meta.title"]);
+    });
+  }
+
   function applyLang(lang){
     if (lang === 'ro') { document.documentElement.lang = 'ro'; return; }
     var dict = translations[lang];
@@ -567,6 +784,7 @@
       var key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
     });
+    updateSeoMeta(lang, dict);
     document.documentElement.lang = lang;
   }
 
