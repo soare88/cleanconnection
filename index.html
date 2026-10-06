@@ -143,6 +143,28 @@
 
   nav a:hover{ color:var(--ink); }
 
+  /* Selector limba */
+  nav ul .lang-switch{ display:flex; align-items:center; gap:4px; }
+  .lang-switch button{
+    font-family:inherit;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:4px 8px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:color .2s, border-color .2s, background .2s;
+  }
+  .lang-switch button:hover{ color:var(--ink); border-color:var(--ink-soft); }
+  .lang-switch button.active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+
   /* Hero with background imagery */
   .hero{
     position:relative;
@@ -552,6 +574,11 @@
         <li><a href="#materiale" data-i18n="nav.materiale">Materiale</a></li>
         <li><a href="#companie" data-i18n="nav.companie">Companie</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="ro">RO</button>
+          <button type="button" data-set-lang="en">EN</button>
+          <button type="button" data-set-lang="de">DE</button>
+        </li>
       </ul>
     </nav>
   </div>
@@ -748,45 +775,97 @@
     }
   };
 
+  var SUPPORTED = ['ro','en','de'];
+
   function detectLang(){
+    // 1) ?lang=xx in adresa
     var params = new URLSearchParams(window.location.search);
     var forced = (params.get('lang')||'').toLowerCase();
-    if (forced==='en'||forced==='de'||forced==='ro') return forced;
+    if (SUPPORTED.indexOf(forced) !== -1) return forced;
+
+    // 2) alegerea facuta manual de vizitator
+    try {
+      var saved = localStorage.getItem('cc_lang');
+      if (SUPPORTED.indexOf(saved) !== -1) return saved;
+    } catch(e){}
+
+    // 3) limba browserului: prima limba recunoscuta din lista (ro, en sau de)
     var langs = navigator.languages || [navigator.language || 'ro'];
     for (var i=0;i<langs.length;i++){
       var l = (langs[i]||'').slice(0,2).toLowerCase();
-      if (l==='en'||l==='de') return l;
+      if (SUPPORTED.indexOf(l) !== -1) return l;
     }
     return 'ro';
   }
 
-  function updateSeoMeta(lang, dict){
+  // Salvez textele originale (romana) ca sa pot reveni la ele
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));
+  var roHTML = els.map(function(el){ return el.innerHTML; });
+  var roTitle = document.title;
+  var metaSelectors = [
+    'meta[name="description"]',
+    'meta[property="og:description"]',
+    'meta[name="twitter:description"]',
+    'meta[property="og:title"]',
+    'meta[name="twitter:title"]'
+  ];
+  var roMeta = {};
+  metaSelectors.forEach(function(sel){
+    var el = document.querySelector(sel);
+    if (el) roMeta[sel] = el.getAttribute('content');
+  });
+
+  function setMeta(sel, value){
+    var el = document.querySelector(sel);
+    if (el && value) el.setAttribute('content', value);
+  }
+
+  function updateSeoMeta(dict){
     if (dict["meta.title"]) document.title = dict["meta.title"];
     var desc = dict["meta.description"];
     if (!desc) return;
-    var descTargets = ['meta[name="description"]','meta[property="og:description"]','meta[name="twitter:description"]'];
-    var titleTargets = ['meta[property="og:title"]','meta[name="twitter:title"]'];
-    descTargets.forEach(function(sel){
-      var el = document.querySelector(sel);
-      if (el) el.setAttribute('content', desc);
-    });
-    titleTargets.forEach(function(sel){
-      var el = document.querySelector(sel);
-      if (el && dict["meta.title"]) el.setAttribute('content', dict["meta.title"]);
+    setMeta('meta[name="description"]', desc);
+    setMeta('meta[property="og:description"]', desc);
+    setMeta('meta[name="twitter:description"]', desc);
+    setMeta('meta[property="og:title"]', dict["meta.title"]);
+    setMeta('meta[name="twitter:title"]', dict["meta.title"]);
+  }
+
+  function markActive(lang){
+    document.querySelectorAll('[data-set-lang]').forEach(function(btn){
+      var on = btn.getAttribute('data-set-lang') === lang;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
 
   function applyLang(lang){
-    if (lang === 'ro') { document.documentElement.lang = 'ro'; return; }
+    if (lang === 'ro'){
+      els.forEach(function(el, i){ el.innerHTML = roHTML[i]; });
+      document.title = roTitle;
+      Object.keys(roMeta).forEach(function(sel){ setMeta(sel, roMeta[sel]); });
+      document.documentElement.lang = 'ro';
+      markActive('ro');
+      return;
+    }
     var dict = translations[lang];
     if (!dict) return;
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
+    els.forEach(function(el){
       var key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
     });
-    updateSeoMeta(lang, dict);
+    updateSeoMeta(dict);
     document.documentElement.lang = lang;
+    markActive(lang);
   }
+
+  document.querySelectorAll('[data-set-lang]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var lang = btn.getAttribute('data-set-lang');
+      try { localStorage.setItem('cc_lang', lang); } catch(e){}
+      applyLang(lang);
+    });
+  });
 
   applyLang(detectLang());
 })();
