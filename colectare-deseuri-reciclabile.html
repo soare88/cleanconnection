@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colectare Deșeuri Reciclabile pentru Firme, Târgoviște | Clean Connection</title>
+<meta name="description" content="Colectare, sortare și direcționare a deșeurilor reciclabile pentru firme. Coordonăm preluarea de la locația ta și predarea către operatori autorizați.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cleanconnection.ro/colectare-deseuri-reciclabile.html">
+<meta property="og:site_name" content="Clean Connection">
+<meta property="og:title" content="Colectare Deșeuri Reciclabile pentru Firme, Târgoviște | Clean Connection">
+<meta property="og:description" content="Colectare, sortare și direcționare a deșeurilor reciclabile pentru firme. Coordonăm preluarea de la locația ta și predarea către operatori autorizați.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.cleanconnection.ro/colectare-deseuri-reciclabile.html">
+<meta property="og:locale" content="ro_RO">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F1F4F6;
+    --ink:#10233F;
+    --ink-soft:#54636F;
+    --accent:#0E9C8C;
+    --line:#DCE2E6;
+    --navy1:#081222;
+    --navy2:#10233F;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+
+  h1, h2, h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  .container{
+    width:90%;
+    max-width:1080px;
+    margin:0 auto;
+  }
+
+  a{ color:inherit; }
+
+  /* Header */
+  header{
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    z-index:100;
+  }
+
+  header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    text-decoration:none;
+    color:var(--ink);
+  }
+
+  .logo svg{ width:22px; height:22px; color:var(--accent); }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:32px;
+  }
+
+  nav a{
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--ink-soft);
+    transition:color .2s;
+  }
+
+  nav a:hover{ color:var(--ink); }
+
+  /* Selector limba */
+  nav ul .lang-switch{ display:flex; align-items:center; gap:4px; }
+  .lang-switch button{
+    font-family:inherit;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:4px 8px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:color .2s, border-color .2s, background .2s;
+  }
+  .lang-switch button:hover{ color:var(--ink); border-color:var(--ink-soft); }
+  .lang-switch button.active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+
+  /* Hero with background imagery */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background-image: linear-gradient(135deg, rgba(8,18,34,0.82) 0%, rgba(16,35,63,0.76) 55%, rgba(14,74,69,0.65) 130%), url('images/hero-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    padding:130px 0 100px;
+    text-align:center;
+    color:#fff;
+  }
+
+  .hero-pattern{
+    position:absolute;
+    inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.07'%3E%3Cline x1='40' y1='18' x2='52' y2='38'/%3E%3Cline x1='55' y1='55' x2='28' y2='55'/%3E%3Cline x1='18' y1='48' x2='30' y2='28'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat;
+  }
+
+  .hero-glow{
+    position:absolute;
+    top:-160px;
+    right:-140px;
+    width:420px;
+    height:420px;
+    background:var(--accent);
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.35;
+  }
+
+  .hero-mark{
+    position:absolute;
+    bottom:-90px;
+    left:50%;
+    transform:translateX(-50%);
+    width:360px;
+    height:360px;
+    color:#ffffff;
+    opacity:0.06;
+  }
+
+  .hero .container{
+    position:relative;
+    z-index:2;
+  }
+
+  .hero h1{
+    font-size:44px;
+    line-height:1.2;
+    max-width:760px;
+    margin:0 auto 22px auto;
+    color:#fff;
+  }
+
+  .hero p{
+    font-size:17px;
+    color:#C9D6DE;
+    max-width:520px;
+    margin:0 auto 34px auto;
+  }
+
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#FFFFFF;
+    padding:14px 32px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    border-radius:4px;
+  }
+
+  .btn:hover{ background:#0B8577; }
+
+  /* Process */
+  .process{
+    padding:80px 0 90px;
+    border-top:1px solid var(--line);
+  }
+
+  .process h2{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:56px;
+  }
+
+  .flow{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    position:relative;
+  }
+
+  .flow::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:6%;
+    right:6%;
+    height:1px;
+    background:var(--line);
+  }
+
+  .flow-step{
+    padding:0 18px;
+    position:relative;
+  }
+
+  .flow-step .num{
+    display:inline-block;
+    width:28px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    background:var(--bg);
+    border:1px solid var(--accent);
+    color:var(--accent);
+    border-radius:50%;
+    font-size:12px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+  }
+
+  .flow-step h3{
+    font-size:17px;
+    margin-bottom:8px;
+  }
+
+  .flow-step p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* Materiale */
+  .materials{
+    padding:80px 0 90px;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .materials h2{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:14px;
+  }
+
+  .materials > .container > p{
+    text-align:center;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto 50px auto;
+  }
+
+  .materials-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:18px;
+  }
+
+  .material-card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:26px 18px;
+    text-align:center;
+  }
+
+  .material-card svg{
+    width:26px;
+    height:26px;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+
+  .material-card h3{
+    font-size:14.5px;
+    margin-bottom:6px;
+  }
+
+  .material-card .code{
+    display:block;
+    font-size:11.5px;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+
+  .material-card p{
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  /* Why section */
+  .why{
+    position:relative;
+    overflow:hidden;
+    padding:80px 0;
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .why-mark{
+    position:absolute;
+    top:-50px;
+    left:-60px;
+    width:240px;
+    height:240px;
+    color:var(--accent);
+    opacity:0.07;
+  }
+
+  .why .container{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+
+  .why h2{
+    font-size:28px;
+    margin-bottom:18px;
+  }
+
+  .why p{
+    color:var(--ink-soft);
+    max-width:440px;
+  }
+
+  .fact-panel{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:8px 30px;
+  }
+
+  .fact-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .fact-row:first-child{ border-top:none; }
+
+  .fact-row .label{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  .fact-row .value{
+    font-size:15px;
+    font-weight:500;
+    color:var(--accent);
+  }
+
+  /* Contact */
+  .contact{
+    padding:90px 0 100px;
+    text-align:center;
+  }
+
+  .contact h2{
+    font-size:28px;
+    margin-bottom:16px;
+  }
+
+  .contact > .container > p{
+    color:var(--ink-soft);
+    max-width:440px;
+    margin:0 auto 40px auto;
+  }
+
+  .contact-panel{
+    max-width:420px;
+    margin:0 auto;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:36px;
+  }
+
+  .phone-link{
+    display:block;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:26px;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+
+  .email-link{
+    display:block;
+    font-size:15px;
+    text-decoration:none;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+
+  .hours{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+
+  /* Footer */
+  footer{
+    background:var(--navy2);
+    color:#9FB0C0;
+    padding:34px 0;
+  }
+
+  footer .container{
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  footer svg{ width:16px; height:16px; color:var(--accent); flex-shrink:0; }
+
+  footer .foot-text p + p{ margin-top:4px; color:#6E7F90; }
+
+  /* Responsive */
+  @media (max-width: 760px){
+    .hero h1{ font-size:32px; }
+    .hero{ padding:80px 0 60px; }
+    .flow{ grid-template-columns:1fr; gap:34px; }
+    .flow::before{ display:none; }
+    .why .container{ grid-template-columns:1fr; }
+    .materials-grid{ grid-template-columns:repeat(2, 1fr); }
+    header .container{
+      flex-wrap:wrap;
+      justify-content:center;
+      row-gap:10px;
+      padding:16px 0;
+    }
+    nav ul{ gap:16px; justify-content:center; }
+  }
+
+  @media (max-width: 420px){
+    .logo{ font-size:17px; }
+    .hero h1{ font-size:26px; }
+    nav ul{ gap:12px; }
+    nav a{ font-size:13px; }
+  }
+</style>
+</head>
+<body>
+<header><nav><a href="https://www.cleanconnection.ro/">Clean Connection</a> | <a href="https://www.cleanconnection.ro/">Acasă</a></nav></header>
+<main>
+<h1>Colectare deșeuri reciclabile pentru firme</h1>
+<p>Preluăm, sortăm și direcționăm deșeurile reciclabile ale partenerilor comerciali către operatori autorizați de procesare, cu un singur punct de contact pentru tot fluxul.</p>
+<section><h2>Cum funcționează</h2><ol><li>Solicitare: ne transmiți tipul și cantitatea estimată de deșeuri.</li><li>Preluare: echipa noastră ridică materialele direct din locația ta.</li><li>Sortare: separăm materialele pe categorii, conform standardelor de valorificare.</li><li>Direcționare: le trimitem către operatori autorizați de reciclare.</li></ol></section>
+<section><h2>Materiale colectate</h2><ul><li>Hârtie și carton (15.01.01): ambalaje și deșeuri papetare.</li><li>Plastic și folie (15.01.02): mase plastice și folii industriale.</li><li>Lemn (15.01.03): ambalaje și deșeuri lemnoase.</li><li>Sticlă (15.01.07): ambalaje din sticlă, colectate separat.</li><li>Deșeuri electrice (20.01.36): echipamente electrice și electrocasnice (DEEE).</li></ul></section>
+<section><h2>Program</h2><p>Luni – Vineri, 08:00 – 18:00. Timp de răspuns: sub 48 de ore.</p></section>
+
+<section><h2>Contact</h2><p>Telefon: 0791 178 888 / 0769 530 218</p><p>Email: contact@cleanconnection.ro</p><p>Adresa: Str. Silozului nr. 1, Târgoviște</p></section>
+</main>
+<footer><p>© 2026 Clean Connection (cleanconnection.ro). Toate drepturile rezervate.</p></footer>
+</body>
+</html>
